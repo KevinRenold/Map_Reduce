@@ -1,0 +1,12 @@
+mkdir machine 
+cd machine 
+ls 
+hadoop fs -mkdir /Learning 
+hadoop fs -copyFromLocal /home/edureka/Desktop/machine /Learning 
+
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordcount /Learning/machine /Learning/MLCount 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmean /Learning/machine /Learning/MLMean 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmedian /Learning/machine /Learning/MLMedian 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordstandarddeviation /Learning/machine /Learning/MLStd
